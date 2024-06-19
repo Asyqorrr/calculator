@@ -58,7 +58,7 @@ del.addEventListener('click', () => {
 })
 
 function splitString(text){
-    const operatorRegex = /([+\-X/=%])/;
+    const operatorRegex = /([+\-x/=%])/;
     const splitString = text.split(operatorRegex);
 
     return splitString;
@@ -74,7 +74,7 @@ function calculateResult(arrText){
     else if(arrText[1] == '-'){
         return parseFloat(a) - parseFloat(b);
     }
-    else if(arrText[1] == 'X'){
+    else if(arrText[1] == 'x'){
         return parseFloat(a) * parseFloat(b);
     }
     else if(arrText[1] == '/'){
