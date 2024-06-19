@@ -40,11 +40,16 @@ clear.addEventListener('click', () => {
 })
 
 result.addEventListener('click', () => {
-    
+    try{
     let text = splitString(input.value);
     let result = calculateResult(text);
     input.value = result;
-    currentInput = "";
+    currentInput = result.toString();
+    }
+    catch(err){
+        input.value = "Error, dont equals before operator";
+        currentInput = ""
+    }
 })
 
 del.addEventListener('click', () => {
